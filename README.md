@@ -1,50 +1,138 @@
-# Lumberio's Travel Inn & Beach Resort
+<div align="center">
 
-A digital welcome guide and booking site for Lumberio's Travel Inn & Beach Resort — a beachfront resort in Quezon Province, Philippines.
+# 🌴 Lumberio's Travel Inn & Beach Resort
 
-## Tech Stack
+### Digital Welcome Guide & Booking App
 
-- React + TypeScript
-- Vite
-- Tailwind CSS
-- shadcn/ui (Radix UI primitives)
-- React Router
-- React Hook Form + Zod
+An interactive web-based digital welcome guide and booking application built for a local resort in Mauban, Quezon, Philippines. It modernizes the guest onboarding experience and improves digital visibility for tourists discovering the resort.
 
-## Project Structure
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+
+</div>
+
+---
+
+## 📖 Overview
+
+**Lumberio's Travel Inn & Beach Resort** is a beachfront resort located in Mauban, Quezon. This project delivers a fast, mobile-responsive digital experience that lets prospective guests explore the resort's rooms and amenities, browse a photo gallery, read local travel information, and submit a booking inquiry — all before they arrive. It replaces static print materials with an accessible, always up-to-date web presence designed to boost the resort's visibility to tourists searching online.
+
+## ✨ Features
+
+- 🏨 **Interactive Room Listings** — Browse available room types with photos, descriptions, and rates
+- 📝 **Dynamic Booking Request Form** — Guests submit stay inquiries directly through a validated form (React Hook Form + Zod)
+- 🗺️ **Localized Travel Guide** — Curated information on getting to the resort, nearby attractions, and travel tips for Mauban, Quezon
+- 🖼️ **Photo Gallery** — Showcases the resort's pools, beachfront, and scenery
+- ❓ **FAQ Section** — Quick answers to common guest questions
+- 📱 **Mobile-Responsive & Accessible UI** — Built with Tailwind CSS and Radix UI primitives for a consistent experience across devices
+
+## 🛠️ Tech Stack
+
+| Category         | Technology                          |
+|-------------------|--------------------------------------|
+| Framework         | [React](https://react.dev/) 18 + [TypeScript](https://www.typescriptlang.org/) |
+| Build Tool        | [Vite](https://vitejs.dev/)         |
+| Styling           | [Tailwind CSS](https://tailwindcss.com/) |
+| UI Components     | [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives) |
+| Routing           | [React Router](https://reactrouter.com/) |
+| Forms & Validation| [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) |
+| Testing           | [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/) |
+
+## 📁 Project Structure
 
 ```
-src/
-  assets/       Images used across the site
-  components/   Reusable UI pieces (Header, Footer, Hero, RoomCard, BookingForm, etc.)
-  components/ui shadcn/ui primitives
-  data/         Static content data (room types, rates)
-  hooks/        Shared React hooks
-  lib/          Utilities
-  pages/        Routed pages (Home, Rooms, Booking, LocalTravelGuide, NotFound)
+project/
+├── public/                    # Static assets
+├── src/
+│   ├── assets/                 # Images (hero, gallery, logo)
+│   ├── components/
+│   │   ├── ui/                 # shadcn/ui primitives
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Amenities.tsx
+│   │   ├── RoomCard.tsx
+│   │   ├── BookingForm.tsx
+│   │   ├── Gallery.tsx
+│   │   ├── WelcomeBook.tsx
+│   │   ├── Faq.tsx
+│   │   ├── Footer.tsx
+│   │   └── Layout.tsx
+│   ├── data/
+│   │   └── rooms.ts            # Room types and rates data
+│   ├── hooks/                  # Shared React hooks
+│   ├── lib/
+│   │   └── utils.ts            # Utility functions
+│   ├── pages/
+│   │   ├── Home.tsx
+│   │   ├── Rooms.tsx
+│   │   ├── Booking.tsx
+│   │   ├── LocalTravelGuide.tsx
+│   │   └── NotFound.tsx
+│   ├── test/                   # Test setup and examples
+│   ├── App.tsx
+│   └── main.tsx
+├── index.html
+├── tailwind.config.ts
+├── vite.config.ts
+└── package.json
 ```
 
-## Pages
+## 🗺️ Pages
 
-- `/` — Home: hero, amenities, welcome book, gallery, FAQ
-- `/rooms` — Full room listing and rates
-- `/booking` — Booking inquiry form and contact details
-- `/local-travel-guide` — Getting here, nearby attractions, and travel tips
+| Route                | Description                                              |
+|-----------------------|-----------------------------------------------------------|
+| `/`                   | Home — hero, amenities, welcome book, gallery, FAQ        |
+| `/rooms`              | Full room listing and rates                                |
+| `/booking`            | Booking inquiry form and contact details                   |
+| `/local-travel-guide` | Getting here, nearby attractions, and travel tips          |
 
-## Getting Started
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm (comes bundled with Node.js)
+
+### Installation
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/KEMMM67/lumberios-booking-system.git
+
+# 2. Navigate into the project directory
+cd lumberios-booking-system/project
+
+# 3. Install dependencies
 npm install
+
+# 4. Start the local development server
 npm run dev
 ```
 
-## Available Scripts
+The app will be available at `http://localhost:5173` by default.
 
-- `npm run dev` — start the local dev server
-- `npm run build` — production build
-- `npm run lint` — run ESLint
-- `npm run test` — run the test suite
+### Available Scripts
 
-## Configuration
+| Command             | Description                          |
+|----------------------|----------------------------------------|
+| `npm run dev`        | Start the local development server     |
+| `npm run build`      | Create a production build              |
+| `npm run build:dev`  | Create a development-mode build        |
+| `npm run preview`    | Preview the production build locally   |
+| `npm run lint`       | Run ESLint                             |
+| `npm run test`       | Run the test suite                     |
+| `npm run test:watch` | Run tests in watch mode                |
 
-The booking form posts to a Formspree endpoint configured in `src/components/BookingForm.tsx`. Replace `FORMSPREE_ENDPOINT` with your own form's endpoint before deploying.
+## ⚙️ Configuration
+
+The booking form submits to a [Formspree](https://formspree.io/) endpoint configured in `src/components/BookingForm.tsx`. Replace the `FORMSPREE_ENDPOINT` value with your own Formspree form endpoint before deploying.
+
+## 👤 Author
+
+**Khynne Mark Elmer L. Lawan**
+
+- GitHub: [@KEMMM67](https://github.com/KEMMM67)
